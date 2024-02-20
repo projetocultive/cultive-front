@@ -1,0 +1,17 @@
+
+input::placeholder {
+    color: #86bab1;
+}  
+
+textarea::placeholder {
+    color: #86bab1;
+}
+
+.fundoContato {
+    background-image: url(../../assets/img/vegetables-742098_1280.jpg);
+      background-repeat: no-repeat;
+      width: 100%;
+      min-height: 100vh;
+      background-size: cover;
+      background-position: center;
+  }
