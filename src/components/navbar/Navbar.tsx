@@ -21,7 +21,7 @@ function Navbar() {
             </Link>
             <Link
               to="/produtos"
-className="font-size: text-1xl font-league hover:font-bold cursor-pointer"
+              className="font-size: text-1xl font-league hover:font-bold cursor-pointer"
             >
               Produtos
             </Link>

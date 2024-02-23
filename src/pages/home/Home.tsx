@@ -1,10 +1,8 @@
-import React from 'react';
 import './Home.css';
 import fotoHome2 from '../../assets/img/fotoHome2.jpg'
 
-
-
 function Home() {
+
     return (
         <>
         <div className="flex justify-center">
