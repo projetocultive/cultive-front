@@ -1,20 +1,10 @@
-import './Home.css';
-import fotoHome2 from '../../assets/img/fotoHome2.jpg'
+import Carousel from '../../components/carousel/Carousel';
 
-function Home() {
-
-    return (
-        <>
-        <div className="flex justify-center">
-    
-          <div className=''><img src={fotoHome2} alt="foto da home" className='w-2/1' />
-          
-          </div>
-          </div>
-      
-      
-      </>
-    );
+export default function Home() {
+  return (
+    <div>
+      <Carousel />
+      {/* <h1>Home</h1> */}
+    </div>
+  );
 }
-
-export default Home;
