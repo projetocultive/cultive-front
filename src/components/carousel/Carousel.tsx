@@ -5,8 +5,8 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import bannerCarrousel1 from '../../assets/img/Descubra o que a natureza pode oferecer de melhor!.png';
-import bannerCarrousel3 from '../../assets/img/1.png';
+import bannerCarrousel3 from '../../assets/img/Descubra o que a natureza pode oferecer de melhor!.png';
+import bannerCarrousel1 from '../../assets/img/1.png';
 import bannerCarrousel2 from '../../assets/img/huge (1).gif';
 // // Importando SEU CSS
 import './Carousel.css';
