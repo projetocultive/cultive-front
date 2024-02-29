@@ -1,8 +1,24 @@
 import cultive from '../../assets/img/cultive.png';
 import { UserCircle } from '@phosphor-icons/react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthContext';
+import { useContext } from 'react';
+import { toastAlerta } from '../../utils/toastAlerta';
 
 function Navbar() {
+  
+  let navigate = useNavigate()
+
+  const { usuario, handleLogout } = useContext(AuthContext)
+
+  function logout() {
+      handleLogout()
+      toastAlerta('Usuário deslogado com sucesso', "sucesso")
+      navigate('/login')
+  }
+
+  // let navbarComponent
+
   return (
     <>
       <div className="w-full bg-teal-900 text-orange-100 flex justify-center py-4">
