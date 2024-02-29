@@ -4,7 +4,7 @@ const api = axios.create({
   baseURL: 'https://cultive.onrender.com/'
 })
 
-export const cadastrarUsuario = async(url: string, dados: object, setDados: Function) => {
+export const cadastrarUsuario = async(url:string, dados: Object, setDados: Function)=>{
   const resposta = await api.post(url, dados)
   setDados(resposta.data)
 }
