@@ -7,7 +7,7 @@ import { toastAlerta } from '../../utils/toastAlerta';
 
 function Navbar() {
   
-  let navigate = useNavigate()
+  const navigate = useNavigate()
 
   const { usuario, handleLogout } = useContext(AuthContext)
 

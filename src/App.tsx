@@ -3,7 +3,6 @@ import './App.css';
 import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/Navbar';
 import Home from './pages/home/Home';
-import Produtos from './components/produtos/Produtos';
 import QuemSomos from './components/quemSomos/QuemSomos';
 import Equipe from './components/equipe/Equipe';
 import Contato from './components/contato/Contato';
@@ -14,13 +13,12 @@ import ListaCategorias from './components/categorias/listaCategorias/ListaCatego
 import FormularioCategorias from './components/categorias/formularioCategorias/FormularioCategorias';
 import DeletarCategorias from './components/categorias/deletarCategorias/DeletarCategorias';
 import { ToastContainer } from 'react-toastify';
+import ListaProdutos from './components/produtos/listaProdutos/ListaProdutos';
 
 function App() {
   return (
     <>
       <AuthProvider>
-
-
         <BrowserRouter>
           <Navbar />
           <ToastContainer />
@@ -28,7 +26,6 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/home" element={<Home />} />
-              <Route path="/produtos" element={<Produtos />} />
               <Route path="/quemSomos" element={<QuemSomos />} />
               <Route path="/equipe" element={<Equipe />} />
               <Route path="/contato" element={<Contato />} />
@@ -38,11 +35,7 @@ function App() {
               <Route path="/cadastroCategorias" element={<FormularioCategorias />} />
               <Route path="/deletarCategorias/:id" element={<DeletarCategorias />} />
               <Route path="/editarCategoria/:id" element= {<FormularioCategorias />} />
-
-
-
-
-
+              <Route path="/produtos" element={<ListaProdutos />} />
             </Routes>
           </div>
 
