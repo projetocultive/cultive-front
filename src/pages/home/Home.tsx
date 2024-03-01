@@ -7,9 +7,10 @@ export default function Home() {
     <>
     <div>
       <Carousel />
-      {/* <h1>Home</h1> */}
+      <ListaProdutos/>
+      
     </div>
-    <ListaProdutos/>
+    
     </>
   );
 }

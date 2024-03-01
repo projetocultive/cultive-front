@@ -17,12 +17,12 @@ function ListaProdutos() {
   const { usuario, handleLogout } = useContext(AuthContext);
   const token = usuario.token;
 
-  useEffect(() => {
-    if (token === '') {
-      alert('Você precisa estar logado');
-      navigate('/');
-    }
-  }, [token]);
+  // useEffect(() => {
+  //   if (token === '') {
+  //     alert('Você precisa estar logado');
+  //     navigate('/login');
+  //   }
+  // }, [token]);
 
   async function buscarProdutos() {
     try {

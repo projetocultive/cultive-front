@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useContext, useEffect, useState } from 'react';
+import  { ChangeEvent, useContext, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Produto from '../../../models/Produto';
@@ -63,7 +63,7 @@ function FormularioProdutos() {
   useEffect(() => {
     if (token === '') {
       alert('Você precisa estar logado');
-      navigate('/');
+      navigate('/login');
     }
   }, [token]);
 
@@ -120,7 +120,7 @@ function FormularioProdutos() {
       }
     } else {
       try {
-        await cadastrar(`/produto/all`, produto, setProduto, {
+        await cadastrar(`/produto/cadastrar`, produto, setProduto, {
           headers: {
             Authorization: token,
           },
