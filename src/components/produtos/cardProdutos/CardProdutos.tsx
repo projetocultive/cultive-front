@@ -19,10 +19,10 @@ function CardProdutos({post}: CardProdutosProps) {
           <p>{post.quantidade}</p>
           <p>{post.preco}</p>
           <p>Categoria: {post.categoria?.descricao}</p>
-          <p>Data: {new Intl.DateTimeFormat(undefined, {
+          {/* <p>Data: {new Intl.DateTimeFormat(undefined, {
                     dateStyle: 'full',
                     timeStyle: 'medium',
-                  }).format(new Date(post.data))}</p>
+                  }).format(new Date(post.))}</p> */}
         </div>
       </div>
       <div className="flex">

@@ -14,6 +14,7 @@ import FormularioCategorias from './components/categorias/formularioCategorias/F
 import DeletarCategorias from './components/categorias/deletarCategorias/DeletarCategorias';
 import { ToastContainer } from 'react-toastify';
 import ListaProdutos from './components/produtos/listaProdutos/ListaProdutos';
+import FormularioProdutos from './components/produtos/formularioProdutos/FormularioProdutos';
 
 function App() {
   return (
@@ -34,8 +35,9 @@ function App() {
               <Route path="/categorias" element={<ListaCategorias />} />
               <Route path="/cadastroCategorias" element={<FormularioCategorias />} />
               <Route path="/deletarCategorias/:id" element={<DeletarCategorias />} />
-              <Route path="/editarCategoria/:id" element= {<FormularioCategorias />} />
+              <Route path="/editarProduto/:id" element={<FormularioProdutos />} />
               <Route path="/produtos" element={<ListaProdutos />} />
+              <Route path="/cadastroProduto" element={<FormularioProdutos />} />
             </Routes>
           </div>
 

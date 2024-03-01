@@ -19,7 +19,7 @@ function ListaCategorias() {
   async function buscarCategorias() {
     try {
       await buscar('/categoria', setCategorias, {
-        headers: { Authorization: token },
+        headers: {Authorization : token},
       });
     } catch (error: any) {
       if(error.toString().includes('403')) {

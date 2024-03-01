@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: 'https://cultive.onrender.com/'
+  baseURL: 'https://cultive.onrender.com'
 })
 
 export const cadastrarUsuario = async(url:string, dados: Object, setDados: Function)=>{
@@ -16,6 +16,7 @@ export const login = async(url: string, dados: object, setDados: Function) => {
 
 export const buscar = async(url: string, setDados: Function, header: Object) => {
   const resposta = await api.get(url, header)
+  console.log(resposta)
   setDados(resposta.data)
 }
 

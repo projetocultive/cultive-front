@@ -5,6 +5,8 @@ import Produto from "../../../models/Produto";
 import { AuthContext } from "../../../contexts/AuthContext";
 import { buscar } from "../../../services/Service";
 import { Dna } from "react-loader-spinner";
+import ModalProdutos from "../modalProdutos/ModalProdutos";
+import BotaoProdutos from "./BotaoProdutos";
 
 function ListaProdutos() {
  
@@ -24,7 +26,7 @@ function ListaProdutos() {
 
   async function buscarProdutos() {
     try {
-      await buscar('/produtos', setProdutos, {
+      await buscar('/produto/all', setProdutos, {
         headers: {
           Authorization: token,
         },
@@ -52,6 +54,7 @@ function ListaProdutos() {
           wrapperClass="dna-wrapper mx-auto"
         />
       )}
+      <BotaoProdutos />
       <div className='container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
         {produtos.map((produto) => (
           <CardProdutos key={produto.id} post={produto} />
