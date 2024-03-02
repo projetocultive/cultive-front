@@ -1,11 +1,10 @@
 import { useContext, useEffect, useState } from "react";
-import CardProdutos from "../cardProdutos/CardProdutos";
-import { useNavigate } from "react-router-dom";
-import Produto from "../../../models/Produto";
-import { AuthContext } from "../../../contexts/AuthContext";
-import { buscar } from "../../../services/Service";
 import { Dna } from "react-loader-spinner";
-import ModalProdutos from "../modalProdutos/ModalProdutos";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../../contexts/AuthContext";
+import Produto from "../../../models/Produto";
+import { buscar } from "../../../services/Service";
+import CardProdutos from "../cardProdutos/CardProdutos";
 import BotaoProdutos from "./BotaoProdutos";
 
 function ListaProdutos() {
@@ -16,7 +15,7 @@ function ListaProdutos() {
 
   const { usuario, handleLogout } = useContext(AuthContext);
   const token = usuario.token;
-
+  const usuarioLogado = token !== ''
   // useEffect(() => {
   //   if (token === '') {
   //     alert('Você precisa estar logado');
@@ -27,20 +26,24 @@ function ListaProdutos() {
   async function buscarProdutos() {
     try {
       await buscar('/produto/all', setProdutos, {
-        headers: {
+        /* headers: {
           Authorization: token,
-        },
+        }, */
       });
-    } catch (error: any) {
+    } catch(e) {
+      console.log(e)
+    }
+    /* catch (error: any) {
       if (error.toString().includes('403')) {
         alert('O token expirou, favor logar novamente')
         handleLogout()
       }
-    }
+    } */
   }
 
   useEffect(() => {
     buscarProdutos();
+    console.log(token)
   }, [produtos.length]);
   return (
     <>
@@ -54,7 +57,7 @@ function ListaProdutos() {
           wrapperClass="dna-wrapper mx-auto"
         />
       )}
-      <BotaoProdutos />
+      {usuarioLogado && <BotaoProdutos />}
       <div className='container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
         {produtos.map((produto) => (
           <CardProdutos key={produto.id} post={produto} />

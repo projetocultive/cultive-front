@@ -4,6 +4,7 @@ import { AuthContext } from '../../../contexts/AuthContext';
 import Produto from '../../../models/Produto';
 import Categoria from '../../../models/Categoria';
 import { buscar, atualizar, cadastrar } from '../../../services/Service';
+import { AxiosError } from 'axios';
 
 
 function FormularioProdutos() {
@@ -31,7 +32,7 @@ function FormularioProdutos() {
     foto: '',
     brinde: '',
     classificacao: '',
-    data: 0,
+    data: new Date(),
     categoria: null,
     usuario: null,
   });
@@ -71,7 +72,6 @@ function FormularioProdutos() {
     buscarCategorias();
     if (id !== undefined) {
       buscarProdutoPorId(id);
-      console.log(categoria);
 
     }
   }, [id]);
@@ -99,11 +99,9 @@ function FormularioProdutos() {
   async function gerarNovoProduto(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    console.log({ produto });
-
     if (id != undefined) {
       try {
-        await atualizar(`/produto/all`, produto, setProduto, {
+        await atualizar(`/produto/atualizar`, produto, setProduto, {
           headers: {
             Authorization: token,
           },
@@ -133,6 +131,7 @@ function FormularioProdutos() {
           alert('O token expirou, favor logar novamente')
           handleLogout()
         } else {
+          console.log(error)
           alert('Erro ao cadastrar o Produto');
         }
       }

@@ -10,7 +10,7 @@ export default interface Produto {
   foto: string;
   brinde: string;
   classificacao: string;
-  data: number;
+  data: Date;
   categoria?: Categoria | null;
   usuario?: Usuario | null;
 }
