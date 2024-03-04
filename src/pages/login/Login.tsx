@@ -103,8 +103,8 @@ function Login() {
             <div className="flex items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                class="w-6 h-6"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+                className="w-6 h-6"
                 viewBox="0 0 48 48"
               >
                 <defs>
@@ -114,7 +114,7 @@ function Login() {
                   />
                 </defs>
                 <clipPath id="b">
-                  <use xlink:href="#a" overflow="visible" />
+                  <use xlinkHref="#a" overflow="visible" />
                 </clipPath>
                 <path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z" />
                 <path

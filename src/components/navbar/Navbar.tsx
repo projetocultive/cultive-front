@@ -7,11 +7,12 @@ import {
   Heart,
   MagnifyingGlass,
 } from '@phosphor-icons/react';
-import { Link, Navigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthContext';
 import { toastAlerta } from '../../utils/toastAlerta';
 
 function Navbar() {
+  const navigate = useNavigate()
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [isUserOpen, setIsUserOpen] = useState(false)
   const { usuario, handleLogout } = useContext(AuthContext)
@@ -19,7 +20,7 @@ function Navbar() {
   function logout() {
     handleLogout()
     toastAlerta('Usuário deslogado com sucesso', 'sucesso')
-    Navigate('/login')
+    navigate('/login')
   }
 
   const toggleProductsDropdown = () => {

@@ -33,7 +33,7 @@ function FormularioProdutos() {
     foto: '',
     brinde: '',
     classificacao: '',
-    data: new Date(),
+    data: '',
     categoria: null,
     usuario: null,
   });
