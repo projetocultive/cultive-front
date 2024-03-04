@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import cultive from '../../assets/img/cultivelogo.png';
 import {
   UserCircle,
@@ -7,11 +7,20 @@ import {
   Heart,
   MagnifyingGlass,
 } from '@phosphor-icons/react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthContext';
+import { toastAlerta } from '../../utils/toastAlerta';
 
 function Navbar() {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
-  const [isUserOpen, setIsUserOpen] = useState(false);
+  const [isUserOpen, setIsUserOpen] = useState(false)
+  const { usuario, handleLogout } = useContext(AuthContext)
+
+  function logout() {
+    handleLogout()
+    toastAlerta('Usuário deslogado com sucesso', 'sucesso')
+    Navigate('/login')
+  }
 
   const toggleProductsDropdown = () => {
     setIsProductsOpen(!isProductsOpen);
@@ -114,6 +123,7 @@ function Navbar() {
               >
                 <Heart size={20} />
               </button>
+              <Link to='' onClick={logout} className='hover:font-bold'>Sair</Link>
             </div>
           </div>
         </div>

@@ -40,7 +40,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
         } catch (error) {
             console.log(error)
-            toastAlerta("Dados do usuário inconsistentes","sucesso")
+            toastAlerta("Dados do usuário inconsistentes","erro")
             setIsLoading(false)
         }
     }

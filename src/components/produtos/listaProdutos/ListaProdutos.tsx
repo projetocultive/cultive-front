@@ -15,7 +15,17 @@ function ListaProdutos() {
 
   const { usuario, handleLogout } = useContext(AuthContext);
   const token = usuario.token;
-  const usuarioLogado = token !== ''
+  const usuarioLogado = true
+  
+
+
+  if  (token ==''){
+    const usuarioLogado = false
+
+  }
+  
+  console.log(usuarioLogado)
+  
   // useEffect(() => {
   //   if (token === '') {
   //     alert('Você precisa estar logado');
