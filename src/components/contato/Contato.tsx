@@ -1,13 +1,15 @@
 import './Contato.css';
 
-
 function Contato() {
   return (
     <>
       <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold">
         <div className="fundoContato hidden lg:block"></div>
         <form className="flex justify-center items-center flex-col w-2/8 gap-6">
-          <h2 className="text-green-700 text-5xl mb-10"> Fale com a gente! </h2>
+          <h2 className="text-xl md:text-4xl font-bold leading-tight mt-12">
+            {' '}
+            Fale com a gente!{' '}
+          </h2>
           <div className="flex flex-col w-full">
             <label htmlFor="nome"></label>
             <input
@@ -15,7 +17,8 @@ function Contato() {
               id="nome"
               name="nome"
               placeholder="Nome"
-              className="border-2 border-green-700 rounded p-3"
+              className="w-full block bg-gray-100 text-gray-500 font-semibold rounded-lg
+              px-4 py-3 mt-6"
             />
           </div>
           <div className="flex flex-col w-full">
@@ -25,7 +28,8 @@ function Contato() {
               id="email"
               name="email"
               placeholder="Digite seu email"
-              className="border-2 border-green-700 rounded p-3"
+              className="w-full block bg-gray-100 text-gray-500 font-semibold rounded-lg
+              px-4 py-3 mt-6"
             />
           </div>
 
@@ -36,7 +40,8 @@ function Contato() {
               id="assunto"
               name="assunto"
               placeholder="Assunto"
-              className="border-2 border-green-700 rounded p-3"
+              className="w-full block bg-gray-100 text-gray-500 font-semibold rounded-lg
+              px-4 py-3 mt-6"
             />
           </div>
 
@@ -46,7 +51,8 @@ function Contato() {
               name="mensagem"
               id="mensagem"
               placeholder="Digite aqui sua mensagem"
-              className="border-2 border-green-700 rounded p-3"
+              className="bw-full block bg-gray-100 text-gray-500 font-semibold rounded-lg
+              px-4 py-3 mt-6"
               rows={6}
               cols={60}
             ></textarea>
@@ -54,7 +60,7 @@ function Contato() {
 
           <div className="flex justify-around w-full gap-8">
             <button
-              className="rounded text-white bg-green-800 hover:bg-green-700 w-1/2 py-2"
+              className="rounded text-white bg-teal-600 hover:bg-teal-800 w-1/2 py-2"
               type="submit"
             >
               Enviar mensagem

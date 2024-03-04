@@ -1,4 +1,4 @@
-import  { ChangeEvent, FormEvent, useContext, useEffect, useState } from 'react';
+import { ChangeEvent, FormEvent, useContext, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 
@@ -20,118 +20,113 @@ function FormularioCategorias() {
     await buscar(`/categoria/${id}`, setCategoria, {
       headers: {
         Authorization: token,
-      }
+      },
     });
   }
 
   useEffect(() => {
     if (id !== undefined) {
-      buscarPorId(id)
+      buscarPorId(id);
     }
-  }, [id])
+  }, [id]);
 
   function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
     setCategoria({
       ...categoria,
-      [e.target.name]: e.target.value
-    })
+      [e.target.name]: e.target.value,
+    });
 
-    console.log(JSON.stringify(categoria))
+    console.log(JSON.stringify(categoria));
   }
 
   async function gerarNovaCategoria(e: ChangeEvent<HTMLFormElement>) {
-    e.preventDefault()
+    e.preventDefault();
 
     if (id !== undefined) {
       try {
         await atualizar(`/categoria`, categoria, setCategoria, {
           headers: {
-            'Authorization': token
-          }
-        })
+            Authorization: token,
+          },
+        });
 
-        toastAlerta('Categoria atualizada com sucesso',"sucesso")
-        retornar()
-
+        toastAlerta('Categoria atualizada com sucesso', 'sucesso');
+        retornar();
       } catch (error: any) {
         if (error.toString().includes('403')) {
-          toastAlerta('O token expirou, favor logar novamente',"erro")
-          handleLogout()
+          toastAlerta('O token expirou, favor logar novamente', 'erro');
+          handleLogout();
         } else {
-          toastAlerta('Erro ao atualizar a Categoria',"erro")
+          toastAlerta('Erro ao atualizar a Categoria', 'erro');
         }
-
       }
-
     } else {
       try {
         await cadastrar(`/categoria`, categoria, setCategoria, {
           headers: {
-            'Authorization': token
-          }
-        })
+            Authorization: token,
+          },
+        });
 
-        toastAlerta('Categoria cadastrado com sucesso',"sucesso")
-
+        toastAlerta('Categoria cadastrado com sucesso', 'sucesso');
       } catch (error: any) {
         if (error.toString().includes('403')) {
-          toastAlerta('O token expirou, favor logar novamente',"erro")
-          handleLogout()
+          toastAlerta('O token expirou, favor logar novamente', 'erro');
+          handleLogout();
         } else {
-          toastAlerta('Erro ao cadastrado a Categoria', "erro")
+          toastAlerta('Erro ao cadastrado a Categoria', 'erro');
         }
       }
     }
 
-    retornar()
+    retornar();
   }
 
   function retornar() {
-    navigate("/categorias")
+    navigate('/categorias');
   }
 
   useEffect(() => {
     if (token === '') {
-      toastAlerta('Você precisa estar logado', "erro");
+      toastAlerta('Você precisa estar logado', 'erro');
       navigate('/login');
     }
- }, [token]);
+  }, [token]);
 
-   
   return (
     <div className="container flex flex-col items-center justify-center mx-auto">
-      <h1 className="text-4xl text-center my-8">
+      <h1 className="text-4xl text-center my-8 text-teal-800">
         {id === undefined ? 'Cadastre uma nova Categoria' : 'Editar Categoria'}
       </h1>
 
       <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovaCategoria}>
-            <div className="flex flex-col gap-2">
-              <label htmlFor="nome">Nome da categoria</label>
-              <input
-                type="text"
-                placeholder="Nome"
-                name='nome'
-                className="border-2 border-slate-700 rounded p-2"
-                value={categoria.nome}
-                onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-              />
-            </div>
-
-
-     
         <div className="flex flex-col gap-2">
-          <label htmlFor="descricao">Descrição da Categoria</label>
+          <label htmlFor="nome"></label>
           <input
             type="text"
-            placeholder="Descrição"
-            name='descricao'
-            className="border-2 border-slate-700 rounded p-2"
+            placeholder="Nome da categoria"
+            name="nome"
+            className="w-full block bg-gray-100 text-gray-500 font-semibold rounded-lg
+              px-4 py-3 mt-6"
+            value={categoria.nome}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+          />
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <label htmlFor="descricao"></label>
+          <input
+            type="text"
+            placeholder="Descrição da categoria"
+            name="descricao"
+            className="w-full block bg-gray-100 text-gray-500 font-semibold rounded-lg
+              px-4 py-3"
             value={categoria.descricao}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
           />
         </div>
         <button
-          className="rounded text-slate-100 bg-indigo-400 hover:bg-indigo-800 w-1/2 py-2 mx-auto block"
+          className="rounded text-slate-100 bg-teal-500 hover:bg-teal-600 w-1/2 py-2 mx-auto block"
           type="submit"
         >
           {id === undefined ? 'Cadastrar' : 'Editar'}

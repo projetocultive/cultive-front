@@ -278,88 +278,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img
-                src={organic}
-                alt="Organic Food"
-                className="w-full h-60 object-cover object-center"
-              />
-              <div className="p-6">
-                <h2 className="text-xl font-semibold mb-2">Salada de Verão</h2>
-                <p className="text-gray-600 mb-4">
-                  Uma deliciosa e refrescante salada de verão feita com
-                  ingredientes orgânicos frescos.
-                </p>
-                <div className="flex items-center justify-between">
-                  <Link
-                    to="/recipe/1"
-                    className="text-teal-500 hover:text-teal-700"
-                  >
-                    Ver Receita
-                  </Link>
-                  <div className="flex items-center">
-                    <Clock size={16} className="mr-1" />
-                    <span className="text-gray-600">30 min</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img
-                src="https://areademulher.r7.com/wp-content/uploads/2021/02/como-fazer-sopa-de-legumes-historia-do-prato-receitas-deliciosas-1200x900.jpg"
-                alt="Organic Food"
-                className="w-full h-60 object-cover object-center"
-              />
-              <div className="p-6">
-                <h2 className="text-xl font-semibold mb-2">Sopa de Legumes</h2>
-                <p className="text-gray-600 mb-4">
-                  Uma saborosa sopa de legumes, perfeita para os dias frios,
-                  feita com vegetais orgânicos frescos.
-                </p>
-                <div className="flex items-center justify-between">
-                  <Link
-                    to="/recipe/2"
-                    className="text-teal-500 hover:text-teal-700"
-                  >
-                    Ver Receita
-                  </Link>
-                  <div className="flex items-center">
-                    <Clock size={16} className="mr-1" />
-                    <span className="text-gray-600">45 min</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img
-                src="https://cdn.loveandlemons.com/wp-content/uploads/2023/05/mango-smoothie.jpg"
-                alt="Organic Food"
-                className="w-full h-60 object-cover object-center"
-              />
-              <div className="p-6">
-                <h2 className="text-xl font-semibold mb-2">
-                  Smoothie Energizante
-                </h2>
-                <p className="text-gray-600 mb-4">
-                  Um smoothie saudável e energizante, preparado com frutas e
-                  verduras orgânicas.
-                </p>
-                <div className="flex items-center justify-between">
-                  <Link
-                    to="/recipe/3"
-                    className="text-teal-500 hover:text-teal-700"
-                  >
-                    Ver Receita
-                  </Link>
-                  <div className="flex items-center">
-                    <Clock size={16} className="mr-1" />
-                    <span className="text-gray-600">10 min</span>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
           <div className="flex justify-center mt-8">
@@ -385,7 +303,7 @@ export default function Home() {
               <div className="bg-white rounded-lg shadow-md p-6">
                 <div className="flex items-center">
                   <img
-                    src={usuario1}
+                    src="https://img.freepik.com/fotos-gratis/uma-linda-mulher-confiante-e-sorridente-olhando-para-a-camera-gerada-pela-inteligencia-artificial_25030-64680.jpg?t=st=1709562965~exp=1709566565~hmac=d8b178bc3496e8592e787fbf41f0f8980f9bb10013120e492a075f1ec2155fb9&w=1380"
                     className="w-12 h-12 rounded-full mr-4"
                     alt="Usuário 1"
                   />
@@ -416,7 +334,7 @@ export default function Home() {
               <div className="bg-white rounded-lg shadow-md p-6">
                 <div className="flex items-center">
                   <img
-                    src={usuario2}
+                    src="https://img.freepik.com/fotos-gratis/cintura-para-cima-retrato-de-bonito-homem-serio-com-barba-por-fazer-mantem-as-maos-juntas-vestido-com-camisa-azul-escura-tem-conversa-com-o-interlocutor-fica-contra-a-parede-branca-freelancer-homem-autoconfiante_273609-16320.jpg?t=st=1709562876~exp=1709566476~hmac=d0cb83b835c69b3c8f5c7e8d8c790a6626bc6c8ae851539ead22b6473036f806&w=1380"
                     className="w-12 h-12 rounded-full mr-4"
                     alt="Usuário 2"
                   />
@@ -444,7 +362,7 @@ export default function Home() {
               <div className="bg-white rounded-lg shadow-md p-6">
                 <div className="flex items-center">
                   <img
-                    src={usuario3}
+                    src="https://clinicasim.com/novo/wp-content/uploads/2022/04/people-age-well-being-and-health-concept-attractive-stylish-mature-female-wearing-white-tank-top-showing-her-muscled-arms-clenching-fists-and-smiling-broadly-having-happy-energetic-look-780x520.jpg"
                     className="w-12 h-12 rounded-full mr-4"
                     alt="Usuário 3"
                   />
@@ -470,7 +388,7 @@ export default function Home() {
               <div className="bg-white rounded-lg shadow-md p-6">
                 <div className="flex items-center">
                   <img
-                    src={usuario4}
+                    src="https://telemedicinamorsch.com.br/wp-content/uploads/2021/09/01-DESTAQUE-Tudo-o-que-voce-precisa-saber-sobre-a-saude-da-mulher.jpg"
                     className="w-12 h-12 rounded-full mr-4"
                     alt="Usuário 4"
                   />

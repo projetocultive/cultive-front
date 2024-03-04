@@ -76,12 +76,16 @@ export default function QuemSomos() {
       <div className="bg-white py-10">
         <div className="mx-auto grid max-w-6xl gap-x-4 gap-y-10 lg:px- xl:grid-cols-3">
           <div className="max-w-2xl">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-teal-800 sm:text-4xl bor">
               Conheça nossa equipe
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Libero fames augue nisl porttitor nisi, quis. Id ac elit odio
-              vitae elementum enim vitae ullamcorper suspendisse.
+            <p className="mt-6 text-lg leading-8 text-teal-800">
+              Conheça nossa equipe, os talentos por trás do Cultive, um
+              e-commerce que conecta produtores rurais e consumidores urbanos
+              por meio de preços justos e redução de desperdício. Com uma equipe
+              diversificada e comprometida, buscamos promover uma conexão direta
+              e sustentável entre quem cultiva e quem consome, apoiando
+              comunidades rurais e práticas de consumo consciente.
             </p>
           </div>
           <ul
@@ -110,7 +114,7 @@ export default function QuemSomos() {
                 <img className="h-16 w-16 rounded-full" src={fotoGabi} alt="" />
                 <div>
                   <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">
-                    Gabriella
+                    Gabriella Vieira
                   </h3>
                   <p className="text-sm font-semibold leading-6 text-teal-600">
                     Desenvolvedora FullStack Jr.

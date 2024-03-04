@@ -105,7 +105,7 @@ function FormularioProdutos() {
             Authorization: token,
           },
         });
-        alert('Produto atualizada com sucesso');
+        alert('Produto atualizado com sucesso');
         retornar();
       } catch (error: any) {
         if (error.toString().includes('403')) {
@@ -155,7 +155,8 @@ function FormularioProdutos() {
             placeholder="Digite o nome do produto"
             name="nome"
             required
-            className="border-2 border-teal-500 rounded p-2"
+            className="w-full block bg-white text-gray-500 font-semibold rounded-lg
+              px-4 py-3 mt-6"
           />
         </div>
         <div className="flex flex-col gap-2">
@@ -167,7 +168,8 @@ function FormularioProdutos() {
             placeholder="Digite uma quantidade"
             name="quantidade"
             required
-            className="border-2 border-teal-500 rounded p-2"
+            className="w-full block bg-white text-gray-500 font-semibold rounded-lg
+              px-4 py-3 mt-6"
           />
         </div>
         <div className="flex flex-col gap-2">
@@ -179,7 +181,8 @@ function FormularioProdutos() {
             placeholder="Digite um peso"
             name="peso"
             required
-            className="border-2 border-teal-500 rounded p-2"
+            className="w-full block bg-white text-gray-500 font-semibold rounded-lg
+              px-4 py-3 mt-6"
           />
         </div>
         <div className="flex flex-col gap-2">
@@ -191,7 +194,8 @@ function FormularioProdutos() {
             placeholder="Digite um preço"
             name="preco"
             required
-            className="border-2 border-teal-500 rounded p-2"
+            className="w-full block bg-white text-gray-500 font-semibold rounded-lg
+              px-4 py-3 mt-6"
           />
         </div>
         <div className="flex flex-col gap-2">
@@ -202,31 +206,11 @@ function FormularioProdutos() {
             type="text"
             placeholder="Foto do produto"
             name="foto"
-            className="border-2 border-teal-500 rounded p-2"
+            className="w-full block bg-white text-gray-500 font-semibold rounded-lg
+              px-4 py-3 mt-6"
           />
         </div>
-        <div className="flex flex-col gap-2">
-          <label htmlFor="brinde">Brinde</label>
-          <input
-            value={produto.brinde}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-            type="text"
-            placeholder="Digite um brinde"
-            name="brinde"
-            className="border-2 border-teal-500 rounded p-2"
-          />
-        </div>
-        <div className="flex flex-col gap-2">
-          <label htmlFor="classificacao">Classificação do produto</label>
-          <input
-            value={produto.classificacao}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-            type="text"
-            placeholder="Digite uma classificação"
-            name="classificacao"
-            className="border-2 border-teal-500 rounded p-2"
-          />
-        </div>
+        
         <div className="flex flex-col gap-2">
           <label htmlFor="data">Data</label>
           <input
@@ -235,7 +219,8 @@ function FormularioProdutos() {
             type="date"
             placeholder="Digite uma data"
             name="data"
-            className="border-2 border-teal-500 rounded p-2"
+            className="w-full block bg-white text-gray-500 font-semibold rounded-lg
+              px-4 py-3 mt-6"
           />
         </div>
         <div className="flex flex-col gap-2">
@@ -243,7 +228,8 @@ function FormularioProdutos() {
           <select
             name="categoria"
             id="categoria"
-            className="border p-2 border-teal-500 rounded"
+            className="w-full block bg-white text-gray-500 font-semibold rounded-lg
+              px-4 py-3 mt-6"
             onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)}
           >
             <option value="" selected disabled>

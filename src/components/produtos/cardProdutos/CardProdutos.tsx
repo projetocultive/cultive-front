@@ -57,13 +57,9 @@ function CardProdutos({ post }: CardProdutosProps) {
 
       <div className="max-w-2xl mx-auto"> */}
 
-      <div className="bg-gray-200 border-2xl shadow-md text-center rounded-lg max-w-sm">
+      <div className="bg-white  shadow-md text-center rounded-lg max-w-sm">
         <a href="#">
-          <img
-            className=" rounded-2xl"
-            src={post.foto}
-            alt="product image"
-          />
+          <img className="rounded-full" src={post.foto} alt="product image" />
           <br />
         </a>
         <div className="px-5 pb-5">
@@ -94,7 +90,7 @@ function CardProdutos({ post }: CardProdutosProps) {
         <div className="flex">
           <Link
             to={`/editarProduto/${post.id}`}
-            className="w-full rounded-3xl text-white bg-teal-400 hover:bg-teal-500 flex items-center justify-center py-2"
+            className="w-full rounded text-white bg-teal-400 hover:bg-teal-500 flex items-center justify-center py-2"
           >
             <button>
               <PencilSimple size={20} />
@@ -102,7 +98,7 @@ function CardProdutos({ post }: CardProdutosProps) {
           </Link>
           <Link
             to={`/deletarProduto/${post.id}`}
-            className="text-white rounded-3xl bg-red-300 hover:bg-red-400 w-full flex items-center justify-center"
+            className="text-white rounded bg-red-300 hover:bg-red-400 w-full flex items-center justify-center"
           >
             <button>
               <Trash size={20} />

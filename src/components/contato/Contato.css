@@ -1,3 +1,8 @@
+
+body {
+  background-color: rgb(238, 231, 231);
+}
+
 input::placeholder {
     color: #86bab1;
   }

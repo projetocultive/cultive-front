@@ -34,18 +34,30 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/categorias" element={<ListaCategorias />} />
-              <Route path="/cadastroCategorias" element={<FormularioCategorias />} />
-              <Route path="/deletarCategorias/:id" element={<DeletarCategorias />} />
-              <Route path="/editarProduto/:id" element={<FormularioProdutos />} />
+              <Route
+                path="/cadastroCategorias"
+                element={<FormularioCategorias />}
+              />
+              <Route
+                path="/deletarCategorias/:id"
+                element={<DeletarCategorias />}
+              />
+              <Route
+                path="/editarProduto/:id"
+                element={<FormularioProdutos />}
+              />
               <Route path="/produtos" element={<ListaProdutos />} />
               <Route path="/cadastroProduto" element={<FormularioProdutos />} />
               <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
+              <Route
+                path="/editarCategoria/:id"
+                element={<FormularioCategorias />}
+              />
             </Routes>
           </div>
 
           <Footer />
         </BrowserRouter>
-
       </AuthProvider>
     </>
   );
