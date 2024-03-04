@@ -140,7 +140,7 @@ function FormularioProdutos() {
   const carregandoCategoria = categoria.descricao === '';
 
   return (
-    <div className="container bg-gray-100 text-teal-800 file:shadow-2xl rounded-2xl flex flex-col mx-auto items-center">
+    <div className="container bg-gray-100 text-teal-800 file:shadow-2xl rounded-2xl flex flex-col mx-auto items-center pb-4">
       <h1 className="text-4xl text-center my-8">
         {id !== undefined ? 'Editar Produto' : 'Cadastrar Produto'}
       </h1>

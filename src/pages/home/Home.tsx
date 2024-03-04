@@ -214,7 +214,7 @@ export default function Home() {
                 </p>
                 <div className="flex items-center justify-between">
                   <Link
-                    to="/recipe/1"
+                    to="/#"
                     className="text-teal-500 hover:text-teal-700"
                   >
                     Ver Receita
@@ -240,7 +240,7 @@ export default function Home() {
                 </p>
                 <div className="flex items-center justify-between">
                   <Link
-                    to="/recipe/1"
+                    to="/#"
                     className="text-teal-500 hover:text-teal-700"
                   >
                     Ver Receita
@@ -266,7 +266,7 @@ export default function Home() {
                 </p>
                 <div className="flex items-center justify-between">
                   <Link
-                    to="/recipe/1"
+                    to="#"
                     className="text-teal-500 hover:text-teal-700"
                   >
                     Ver Receita
@@ -282,7 +282,7 @@ export default function Home() {
 
           <div className="flex justify-center mt-8">
             <Link
-              to="/recipes"
+              to="#"
               className="bg-teal-500 hover:bg-teal-600 text-white py-2 px-4 rounded-lg flex items-center"
             >
               <MagnifyingGlass size={20} className="mr-2" />
@@ -411,7 +411,7 @@ export default function Home() {
               </div>
             </div>
             <a
-              href="#"
+              href="/contato"
               className="hidden text-sm font-semibold text-teal-600 hover:text-gray-500 sm:block"
             >
               Faça como eles, deixe seu feedback!
