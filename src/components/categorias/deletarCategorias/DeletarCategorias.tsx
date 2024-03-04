@@ -67,6 +67,7 @@ function DeletarCategoria() {
         retornar()
     }
     return (
+        <>
         <div className='container w-1/3 mx-auto'>
             <h1 className='text-4xl text-center my-4'>Deletar Categoria</h1>
 
@@ -83,6 +84,7 @@ function DeletarCategoria() {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

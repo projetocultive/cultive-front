@@ -94,6 +94,7 @@ function FormularioCategorias() {
   }, [token]);
 
   return (
+    <>
     <div className="container flex flex-col items-center justify-center mx-auto">
       <h1 className="text-4xl text-center my-8 text-teal-800">
         {id === undefined ? 'Cadastre uma nova Categoria' : 'Editar Categoria'}
@@ -133,6 +134,7 @@ function FormularioCategorias() {
         </button>
       </form>
     </div>
+    </>
   );
 }
 

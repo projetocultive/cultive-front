@@ -17,14 +17,9 @@ function ListaProdutos() {
   const token = usuario.token;
   const usuarioLogado = true
   
-
-
   if  (token ==''){
     const usuarioLogado = false
-
   }
-  
-  console.log(usuarioLogado)
   
   // useEffect(() => {
   //   if (token === '') {
@@ -55,6 +50,7 @@ function ListaProdutos() {
     buscarProdutos();
     console.log(token)
   }, [produtos.length]);
+  
   return (
     <>
       {produtos.length === 0 && (

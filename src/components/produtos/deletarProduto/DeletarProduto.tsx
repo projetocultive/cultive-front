@@ -64,6 +64,7 @@ function DeletarProduto() {
     retornar();
   }
   return (
+    <>
     <div className="mt-16 container w-1/3 mx-auto">
       <h1 className="text-4xl text-center my-4">Deletar produto</h1>
 
@@ -96,6 +97,7 @@ function DeletarProduto() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

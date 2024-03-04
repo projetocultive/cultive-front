@@ -8,6 +8,7 @@ interface categoriaProps {
 
 function CardCategorias({categoria}:categoriaProps) {
   return (
+    <>
     <div className='bg-fundo border flex flex-col rounded-2xl overflow-hidden justify-between'>
       <header className='py-2 px-6 bg-teal-700 text-white font-bold text-2xl'>{categoria.nome}</header>
       <p className='p-8 text-3xl bg-slate-200 h-full'>{categoria.descricao}</p>
@@ -19,11 +20,8 @@ function CardCategorias({categoria}:categoriaProps) {
           <button>Deletar</button>
         </Link>
       </div>
-
-      
-
-      
     </div>
+    </>
   )
 }
 
