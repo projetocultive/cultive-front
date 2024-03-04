@@ -11,7 +11,8 @@ import BotaoCategoria from './BotaoCategoria';
 function ListaCategorias() {
   const [categoria, setCategorias] = useState<Categoria[]>([]);
 
-  let navigate = useNavigate();
+  const navigate = useNavigate();
+
 
   const { usuario, handleLogout } = useContext(AuthContext);
   const token = usuario.token;
@@ -30,11 +31,12 @@ function ListaCategorias() {
   }
 
   useEffect(() => {
-    if (token === '') {
+    if (token === '' ) {
       toastAlerta('Você precisa estar logado', 'info');
       navigate('/login');
     }
   }, [token]);
+
 
   useEffect(() => {
     buscarCategorias();

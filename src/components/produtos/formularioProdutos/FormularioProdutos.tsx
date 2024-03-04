@@ -6,6 +6,7 @@ import Produto from '../../../models/Produto';
 import Categoria from '../../../models/Categoria';
 import { buscar, atualizar, cadastrar } from '../../../services/Service';
 import { AxiosError } from 'axios';
+import { toastAlerta } from '../../../utils/toastAlerta';
 
 function FormularioProdutos() {
   const navigate = useNavigate();
@@ -63,7 +64,7 @@ function FormularioProdutos() {
 
   useEffect(() => {
     if (token === '') {
-      alert('Você precisa estar logado');
+      toastAlerta('Você precisa estar logado', 'info');
       navigate('/login');
     }
   }, [token]);
@@ -105,14 +106,14 @@ function FormularioProdutos() {
             Authorization: token,
           },
         });
-        alert('Produto atualizado com sucesso');
+        toastAlerta('Produto atualizado com sucesso', 'sucesso');
         retornar();
       } catch (error: any) {
         if (error.toString().includes('403')) {
-          alert('O token expirou, favor logar novamente');
+          toastAlerta('O token expirou, favor logar novamente', 'info');
           handleLogout();
         } else {
-          alert('Erro ao atualizar o Produto');
+          toastAlerta('Erro ao atualizar o Produto', 'erro');
         }
       }
     } else {
@@ -123,15 +124,15 @@ function FormularioProdutos() {
           },
         });
 
-        alert('Produto cadastrado com sucesso');
+        toastAlerta('Produto cadastrado com sucesso','sucesso');
         retornar();
       } catch (error: any) {
         if (error.toString().includes('403')) {
-          alert('O token expirou, favor logar novamente');
+          toastAlerta('O token expirou, favor logar novamente', 'info');
           handleLogout();
         } else {
           console.log(error);
-          alert('Erro ao cadastrar o Produto');
+          toastAlerta('Erro ao cadastrar o Produto', 'info');
         }
       }
     }
@@ -147,7 +148,7 @@ function FormularioProdutos() {
 
       <form onSubmit={gerarNovoProduto} className="flex flex-col w-1/2 gap-4">
         <div className="flex flex-col gap-2">
-          <label htmlFor="nome">NOME DO PRODUTO</label>
+          <label htmlFor="nome">Nome do Produto</label>
           <input
             value={produto.nome}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}

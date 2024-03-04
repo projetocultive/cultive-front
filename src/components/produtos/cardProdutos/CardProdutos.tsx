@@ -59,7 +59,7 @@ function CardProdutos({ post }: CardProdutosProps) {
 
       <div className="bg-white  shadow-md text-center rounded-lg max-w-sm">
         <a href="#">
-          <img className="rounded-full" src={post.foto} alt="product image" />
+          <img className="rounded-full" src={post.foto} alt="product image" style={{ maxWidth: '300px', maxHeight: '300px' }}/>
           <br />
         </a>
         <div className="px-5 pb-5">
