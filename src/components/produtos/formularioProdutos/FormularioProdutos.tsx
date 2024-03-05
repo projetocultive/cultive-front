@@ -213,7 +213,7 @@ function FormularioProdutos() {
           />
         </div>
         
-        <div className="flex flex-col gap-2">
+        {/* <div className="flex flex-col gap-2">
           <label htmlFor="data">Data</label>
           <input
             value={produto.data}
@@ -224,7 +224,7 @@ function FormularioProdutos() {
             className="w-full block bg-white text-gray-500 font-semibold rounded-lg
               px-4 py-3 mt-6"
           />
-        </div>
+        </div> */}
         <div className="flex flex-col gap-2">
           <p>Categoria do produto</p>
           <select

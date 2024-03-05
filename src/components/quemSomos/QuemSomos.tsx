@@ -19,8 +19,7 @@ export default function QuemSomos() {
                   Quem somos nós?
                 </span>
                 <h2 className="text-white font-bold italic text-3xl">
-                  "Os alimentos orgânicos oferecem uma escolha saudável para o
-                  seu corpo e um voto de confiança para o meio ambiente."
+                  "Somos uma plataforma dedicada a facilitar uma conexão direta e transparente entre produtores e consumidores."
                 </h2>
               </div>
               <a
@@ -29,7 +28,7 @@ export default function QuemSomos() {
               >
                 <span>Mais</span>
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns="#"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
@@ -49,16 +48,12 @@ export default function QuemSomos() {
             </div>
             <div>
               <div className="pl-12">
-                <p className="peer mb-6 text-gray-400">
-                  Somos uma plataforma dedicada a facilitar uma conexão direta e
-                  transparente entre produtores e consumidores, redefinindo os
-                  padrões de produção, distribuição e consumo de alimentos.
-                  Nosso propósito é construir uma ponte que promova relações
-                  mais justas e sustentáveis, estamos dedicados a moldar uma
-                  nova visão, transformando a maneira como o mundo consome e se
-                  alimenta.
+                <h2 className='font-bold '>Propósito</h2>
+                <p className="peer mb-6 text-gray-400 text-justify">
+                Buscamos redefinir os padrões de produção, distribuição e consumo de alimentos. Nosso propósito é construir uma ponte que promova relações mais justas e sustentáveis, estamos dedicados a moldar uma nova visão, transformando a maneira como o mundo consome e se alimenta.
                 </p>
-                <p className="mb-6 text-gray-400">
+                <h2 className='font-bold' >Valores</h2>
+                <p className="mb-6 text-gray-400 text-justify">
                   Nossos valores fundamentais incluem transparência, inovação
                   sustentável, colaboração eficiente, empoderamento econômico
                   aos produtores e responsabilidade ambiental. Imaginamos um
@@ -130,7 +125,7 @@ export default function QuemSomos() {
                     Johnnata Silva
                   </h3>
                   <p className="text-sm font-semibold leading-6 text-teal-600">
-                    Desenvolvedora FullStack Jr.
+                    Desenvolvedor FullStack Jr.
                   </p>
                 </div>
               </div>
@@ -160,7 +155,7 @@ export default function QuemSomos() {
                     Nathan Nolacio
                   </h3>
                   <p className="text-sm font-semibold leading-6 text-teal-600">
-                    Desenvolvedora FullStack Jr.
+                    Desenvolvedor FullStack Jr.
                   </p>
                 </div>
               </div>
