@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Produto from '../../../models/Produto';
 import {
+  Clock,
   Coins,
   PencilSimple,
   ShoppingCart,
@@ -12,64 +13,30 @@ interface CardProdutosProps {
 }
 
 function CardProdutos({ post }: CardProdutosProps) {
+  const navigate = useNavigate();
   return (
     <>
-      {/* <div classNameName="bg-white rounded-lg shadow-md overflow-hidden">
-        <img
-          src={post.foto}
-          alt="Organic Food"
-          classNameName="w-full h-60 object-cover object-center"
-        />
-        <div classNameName="p-6">
-          <h2 classNameName="text-xl font-semibold mb-2">{post.nome}</h2>
-          <p classNameName="text-gray-600 mb-4">{post.quantidade}</p>
-          <p classNameName="text-gray-600 mb-4">{post.peso}</p>
-          <p classNameName="text-gray-600 mb-4">{post.preco}</p>
-          <p classNameName="text-gray-600 mb-4">
-            {' '}
-            Categoria: {post.categoria?.descricao}
-          </p>
-          <div classNameName="flex items-center justify-between">
-            <Link to="/recipe/1" classNameName="text-teal-500 hover:text-teal-700">
-              Ver produto
-            </Link>
-            <div classNameName="flex items-center">
-              <Clock size={16} classNameName="mr-1" />
-              <span classNameName="text-gray-600">30 min</span>
-            </div>
-          </div>
-        </div>
-        <div classNameName="flex">
-          <Link
-            to={`/editarProduto/${post.id}`}
-            classNameName="w-full text-white bg-teal-400 hover:bg-teal-500 flex items-center justify-center py-2"
-          >
-            <button>Editar</button>
-          </Link>
-          <Link
-            to={`/deletarProduto/${post.id}`}
-            classNameName="text-white bg-red-300 hover:bg-red-400 w-full flex items-center justify-center"
-          >
-            <button>Deletar</button>
-          </Link>
-        </div>
-      </div>
-
-      <div className="max-w-2xl mx-auto"> */}
-
-      <div className="bg-white  shadow-md text-center rounded-lg max-w-sm">
-        <a href="#">
-          <img className="rounded-full" src={post.foto} alt="product image" style={{ maxWidth: '300px', maxHeight: '300px' }}/>
+      <div
+        className="bg-white shadow-md text-center rounded-lg"
+        style={{ height: '360px', display: 'flex', flexDirection: 'column' }}
+      >
+        <a href="#" style={{ alignSelf: 'center' }}>
+          <img
+            className="rounded-full"
+            src={post.foto}
+            alt="product image"
+            style={{ height: '150px' }}
+          />
           <br />
         </a>
         <div className="px-5 pb-5">
           <a href="#">
-            <h3 className=" text-gray-800 font-semibold text-xl tracking-tight">
-              <p className="text-center"> </p>
+            <h3 className="text-gray-800 font-semibold text-xl tracking-tight">
+              <p className="text-center"></p>
               {post.nome}
             </h3>
             <br />
-            <h3 className=" text-gray-800 font-semibold text-xl tracking-tight ">
+            <h3 className="text-gray-800 font-semibold text-xl tracking-tight">
               Peso em kg = {post.peso}
             </h3>
           </a>
@@ -88,22 +55,24 @@ function CardProdutos({ post }: CardProdutosProps) {
           </div>
         </div>
         <div className="flex">
-          <Link
-            to={`/editarProduto/${post.id}`}
-            className="w-full rounded text-white bg-teal-400 hover:bg-teal-500 flex items-center justify-center py-2"
+          <button
+            onClick={() => navigate(`/editarProduto/${post.id}`)}
+            style={{ alignItems: 'center', width: '50%' }}
+            className='rounded text-white bg-teal-400 hover:bg-teal-500 flex items-center justify-center py-2"'
           >
-            <button>
-              <PencilSimple size={20} />
-            </button>
-          </Link>
-          <Link
-            to={`/deletarProduto/${post.id}`}
-            className="text-white rounded bg-red-300 hover:bg-red-400 w-full flex items-center justify-center"
+            <PencilSimple size={22} />
+          </button>
+
+          <button
+            onClick={() => navigate(`/deletarProduto/${post.id}`)}
+            style={{
+              alignItems: 'center',
+              width: '50%',
+            }}
+            className='rounded text-white bg-red-400 hover:bg-red-500 flex items-center justify-center py-"'
           >
-            <button>
-              <Trash size={20} />
-            </button>
-          </Link>
+            <Trash size={22} />
+          </button>
         </div>
       </div>
     </>
